@@ -28,8 +28,8 @@ const Auth = () => {
 
         const { username, password, phoneNumber, avatarURL } = form;
 
-        const URL = 'https://localhost:5000/auth';
-        // const URL = 'https://medical-pager.herokuapp.com/auth';
+        const URL = 'http://localhost:5000/auth';
+        // const URL = 'http://medical-pager.herokuapp.com/auth';
 
         const { data: { token, userId, hashedPassword, fullName } } = await axios.post(`${URL}/${isSignup ? 'signup' : 'login'}`, {
             username, password, fullName: form.fullName, phoneNumber, avatarURL,
@@ -62,8 +62,8 @@ const Auth = () => {
                         {isSignup && (
                             <div className="auth__form-container_fields-content_input">
                                 <label htmlFor="fullName">Full Name</label>
-                                <input 
-                                    name="fullName" 
+                                <input
+                                    name="fullName"
                                     type="text"
                                     placeholder="Full Name"
                                     onChange={handleChange}
@@ -73,8 +73,8 @@ const Auth = () => {
                         )}
                         <div className="auth__form-container_fields-content_input">
                             <label htmlFor="username">Username</label>
-                                <input 
-                                    name="username" 
+                                <input
+                                    name="username"
                                     type="text"
                                     placeholder="Username"
                                     onChange={handleChange}
@@ -84,8 +84,8 @@ const Auth = () => {
                         {isSignup && (
                             <div className="auth__form-container_fields-content_input">
                                 <label htmlFor="phoneNumber">Phone Number</label>
-                                <input 
-                                    name="phoneNumber" 
+                                <input
+                                    name="phoneNumber"
                                     type="text"
                                     placeholder="Phone Number"
                                     onChange={handleChange}
@@ -96,8 +96,8 @@ const Auth = () => {
                         {isSignup && (
                             <div className="auth__form-container_fields-content_input">
                                 <label htmlFor="avatarURL">Avatar URL</label>
-                                <input 
-                                    name="avatarURL" 
+                                <input
+                                    name="avatarURL"
                                     type="text"
                                     placeholder="Avatar URL"
                                     onChange={handleChange}
@@ -107,8 +107,8 @@ const Auth = () => {
                         )}
                         <div className="auth__form-container_fields-content_input">
                                 <label htmlFor="password">Password</label>
-                                <input 
-                                    name="password" 
+                                <input
+                                    name="password"
                                     type="password"
                                     placeholder="Password"
                                     onChange={handleChange}
@@ -118,8 +118,8 @@ const Auth = () => {
                         {isSignup && (
                             <div className="auth__form-container_fields-content_input">
                                 <label htmlFor="confirmPassword">Confirm Password</label>
-                                <input 
-                                    name="confirmPassword" 
+                                <input
+                                    name="confirmPassword"
                                     type="password"
                                     placeholder="Confirm Password"
                                     onChange={handleChange}
@@ -134,7 +134,7 @@ const Auth = () => {
                     <div className="auth__form-container_fields-account">
                         <p>
                             {isSignup
-                             ? "Already have an account?" 
+                             ? "Already have an account?"
                              : "Don't have an account?"
                              }
                              <span onClick={switchMode}>
@@ -142,7 +142,7 @@ const Auth = () => {
                              </span>
                         </p>
                     </div>
-                </div> 
+                </div>
             </div>
             <div className="auth__form-container_image">
                 <img src={signinImage} alt="sign in" />

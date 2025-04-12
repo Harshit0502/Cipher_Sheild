@@ -1,0 +1,7 @@
+STREAM_APP_ID = stream-api-id
+STREAM_API_KEY = strea-api -key
+STREAM_API_SECRET = Your-strea-api-secret
+
+TWILIO_ACCOUNT_SID = twilio-account-id
+TWILIO_AUTH_TOKEN = twilio-auth-token
+TWILIO_MESSAGING_SERVICE_SID = twilio-messaging-service-id
